@@ -1,10 +1,10 @@
 // Global constants and variables
 let selectedWord;
 let letterBoxes;
-let hangmanImg;
-let hangmanNr;
-let msgElem;
-let startGameBtn;
+let hangmanImage;
+let hangmanNumber;
+let messageElement;
+let startGameButton;
 let letterButtons;
 let startTime;
 
@@ -57,10 +57,10 @@ const wordList = [
 // Function that runs when the entire web page is loaded
 function init() {
   // Start button
-  startGameBtn = document.getElementById("start-game-button");
+  startGameButton = document.getElementById("start-game-button");
 
   // The game starts by clicking the start button
-  startGameBtn.onclick = startGame;
+  startGameButton.onclick = startGame;
 
   // Letter buttons
   letterButtons = document
@@ -73,12 +73,12 @@ function init() {
   }
 
   // Image
-  hangmanImg = document.getElementById("hangman");
+  hangmanImage = document.getElementById("hangman");
   // Message
-  msgElem = document.getElementById("message");
+  messageElement = document.getElementById("message");
 
   // Start button is activated
-  startGameBtn.disabled = false;
+  startGameButton.disabled = false;
   // Letter buttons are disabled
   for (let i = 0; i < letterButtons.length; i++) {
     letterButtons[i].disabled = true;
@@ -93,17 +93,17 @@ function startGame() {
   randomWord();
   showLetterBoxes();
 
-  hangmanImg.src = "img/h0.png"; // Saving first image into the img element
-  hangmanNr = 0; // Variable with number for changing of the images
+  hangmanImage.src = "img/h0.png"; // Saving first image into the img element
+  hangmanNumber = 0; // Variable with number for changing of the images
 
   // Start button is disabled
-  startGameBtn.disabled = true;
+  startGameButton.disabled = true;
   // Letter buttons are activated
   for (i = 0; i < letterButtons.length; i++) {
     letterButtons[i].disabled = false;
   }
 
-  msgElem.innerHTML = ""; // Clears message when new game starts
+  messageElement.innerHTML = ""; // Clears message when new game starts
 
   // Game start time
   let now = new Date();
@@ -164,11 +164,11 @@ function guessLetter() {
   }
   // Checks if the letter is not in the word and changes the image
   if (letterFound == false) {
-    hangmanNr++; // Increases the image number
-    hangmanImg.src = "img/h" + hangmanNr + ".png"; // Showing the new image
+    hangmanNumber++; // Increases the image number
+    hangmanImage.src = "img/h" + hangmanNumber + ".png"; // Showing the new image
 
     // Ends the game if you get to image 6
-    if (hangmanNr == 6) {
+    if (hangmanNumber == 6) {
       endGame(true);
     }
   }
@@ -187,16 +187,17 @@ function endGame(manHanged) {
 
   // Checks if the man was hanged or not and prints a message
   if (manHanged == true) {
-    msgElem.innerHTML = "Tyvärr, gubben hängdes. Rätt svar är " + selectedWord;
+    messageElement.innerHTML = "Rätt svar är " + selectedWord;
   } else {
-    msgElem.innerHTML = "Gratulerar! Du kom fram till rätt ord!";
+    messageElement.innerHTML = "Grattis!";
   }
   // The start button activates for a new game
-  startGameBtn.disabled = false;
+  startGameButton.disabled = false;
   // Letter buttons are disabled
   for (i = 0; i < letterButtons.length; i++) {
     letterButtons[i].disabled = true;
   }
   // Message with the game time
-  msgElem.innerHTML += "<br>Det tog " + runTime.toFixed(1) + " sekunder.";
+  messageElement.innerHTML +=
+    "<br>Speltid: " + runTime.toFixed(1) + " sekunder.";
 }
