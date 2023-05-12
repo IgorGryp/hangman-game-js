@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#start-game-button-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#startGameBtn {
+  background-color: #febf00;
+  font-size: 1.5em;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+#board {
+  border-top: 1px solid #919191;
+  border-bottom: 1px solid #919191;
+  margin-top: 1rem;
+}
+
+#letterButtons {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#letterButtons button {
+  flex: 0 0 3em;
+  height: 2em;
+  font-size: 1.5em;
+  margin: 4px;
+}
+
+#letterBoxes {
+  clear: both;
+  margin-top: 20px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#letterBoxes span {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #666;
+  margin: 4px;
+  width: 2em;
+  line-height: 2em;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#hangman {
+  display: block;
+  margin: 0 auto;
+}
+
+#message {
+  padding-top: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@media screen and (max-width: 685px) {
+  #letterBoxes span {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 571px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  #startGameBtn {
+    font-size: 1.2em;
+  }
+  #letterButtons button {
+    font-size: 1.2em;
+  }
+  #letterBoxes span {
+    font-size: 1.2rem;
+  }
+  #message {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 374px) {
+ #letterButtons {
+  width: 90%;
+}
+}

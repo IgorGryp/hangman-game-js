@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Hänga Gubbe</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hänga Gubbe</h1>
+    </header>
+    <main>
+      <div id="start-game-button-div">
+        <button type="button" id="startGameBtn">Starta spelet</button>
+      </div>
+      <div id="letterButtons">
+        <button type="button" value="A">A</button>
+        <button type="button" value="B">B</button>
+        <button type="button" value="C">C</button>
+        <button type="button" value="D">D</button>
+        <button type="button" value="E">E</button>
+        <button type="button" value="F">F</button>
+        <button type="button" value="G">G</button>
+        <button type="button" value="H">H</button>
+        <button type="button" value="I">I</button>
+        <button type="button" value="J">J</button>
+        <button type="button" value="K">K</button>
+        <button type="button" value="L">L</button>
+        <button type="button" value="M">M</button>
+        <button type="button" value="N">N</button>
+        <button type="button" value="O">O</button>
+        <button type="button" value="P">P</button>
+        <button type="button" value="Q">Q</button>
+        <button type="button" value="R">R</button>
+        <button type="button" value="S">S</button>
+        <button type="button" value="T">T</button>
+        <button type="button" value="U">U</button>
+        <button type="button" value="V">V</button>
+        <button type="button" value="W">W</button>
+        <button type="button" value="X">X</button>
+        <button type="button" value="Y">Y</button>
+        <button type="button" value="Z">Z</button>
+        <button type="button" value="Å">Å</button>
+        <button type="button" value="Ä">Ä</button>
+        <button type="button" value="Ö">Ö</button>
+      </div>
+      <!-- Here the program will insert one span element per letter -->
+      <div id="letterBoxes"></div>
+      <!-- The image in this img tag will change every time the user selects the wrong letter -->
+      <img id="hangman" src="img/empty.png" alt="Galge och gubbe" />
+      <!-- Here the program writes messages to the user -->
+      <div id="message"></div>
+    </main>
+  </body>
+</html>
