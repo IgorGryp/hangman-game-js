@@ -57,14 +57,14 @@ const wordList = [
 // Function that runs when the entire web page is loaded
 function init() {
   // Start button
-  startGameBtn = document.getElementById("startGameBtn");
+  startGameBtn = document.getElementById("start-game-button");
 
   // The game starts by clicking the start button
   startGameBtn.onclick = startGame;
 
   // Letter buttons
   letterButtons = document
-    .getElementById("letterButtons")
+    .getElementById("letter-buttons")
     .getElementsByTagName("button");
 
   // Loops through letter buttons and adds the guessLetter function to each button
@@ -134,10 +134,10 @@ function showLetterBoxes() {
     newCode += "<span>&nbsp;</span>";
   }
 
-  document.getElementById("letterBoxes").innerHTML = newCode; // Prints the letter boxes
+  document.getElementById("letter-boxes").innerHTML = newCode; // Prints the letter boxes
   // Reference to the div element and letter boxes are saved in the variable
   letterBoxes = document
-    .getElementById("letterBoxes")
+    .getElementById("letter-boxes")
     .getElementsByTagName("span");
 }
 

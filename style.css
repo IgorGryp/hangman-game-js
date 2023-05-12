@@ -23,11 +23,12 @@ h1 {
   justify-content: center;
 }
 
-#startGameBtn {
+#start-game-button {
   background-color: #febf00;
   font-size: 1.5em;
   padding: 0.5rem;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 #board {
@@ -36,7 +37,7 @@ h1 {
   margin-top: 1rem;
 }
 
-#letterButtons {
+#letter-buttons {
   margin: 0 auto;
   width: 70%;
   max-width: 100%;
@@ -45,14 +46,15 @@ h1 {
   justify-content: center;
 }
 
-#letterButtons button {
+#letter-buttons button {
   flex: 0 0 3em;
   height: 2em;
   font-size: 1.5em;
   margin: 4px;
+  cursor: pointer;
 }
 
-#letterBoxes {
+#letter-boxes {
   clear: both;
   margin-top: 20px;
   padding: 1rem;
@@ -60,7 +62,7 @@ h1 {
   justify-content: center;
 }
 
-#letterBoxes span {
+#letter-boxes span {
   display: inline-block;
   background-color: #fff;
   border: 1px solid #666;
@@ -83,7 +85,7 @@ h1 {
 }
 
 @media screen and (max-width: 685px) {
-  #letterBoxes span {
+  #letter-boxes span {
     font-size: 1.4rem;
   }
 }
@@ -92,13 +94,13 @@ h1 {
   h1 {
     font-size: 1.8rem;
   }
-  #startGameBtn {
+  #start-game-button {
     font-size: 1.2em;
   }
-  #letterButtons button {
+  #letter-buttons button {
     font-size: 1.2em;
   }
-  #letterBoxes span {
+  #letter-boxes span {
     font-size: 1.2rem;
   }
   #message {
@@ -107,7 +109,7 @@ h1 {
 }
 
 @media screen and (max-width: 374px) {
- #letterButtons {
-  width: 90%;
-}
+  #letter-buttons {
+    width: 90%;
+  }
 }
